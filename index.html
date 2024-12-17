@@ -8,11 +8,74 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var Vides=7; 
+            palabra="";
+            fallos="";
+            function myFunction() {
+                lletra = document.getElementById("lletra").value;
+               lletra=lletra.toLowerCase();
+               switch(lletra) {
+                   case"á":
+                   case"à":
+                       lletra="a";
+                       break;
+                    case"é":
+                    case"è":
+                       lletra="e";
+                       break; 
+                    case"í":
+                    case"ï":
+                       lletra="i";
+                       break;
+                    case"ó":
+                    case"ö":
+                       lletra="o";
+                       break;
+                    case"ú":
+                    case"ü":
+                       lletra="u";
+                       break;
+               }                
+                if ((lletra >= "a") && (lletra <= "n")) {
+                    window.alert("has encertat");
+                    palabra=palabra+lletra;
+                     document.getElementById("palabra").innerHTML = palabra;
+                }
+                else {
+                   window.alert("has fallat"); 
+                   Vides=Vides-1;
+                   document.getElementById("vides").innerHTML = Vides;
+                   fallos=fallos+lletra;
+                   document.getElementById("fallos").innerHTML = fallos;
+               }
+               if (Vides==0) {
+                   window.alert("has perdido");
+                   FinalJuego();
+               } 
+               if (palabra.length >=7) {
+               window.alert("has ganado");
+                   FinalJuego();    
+               }
+            } 
+            function FinalJuego() {
+                document.getElementById("boton").hidden = true;
+                document.getElementById("lletra").hidden = true;
+            }
+        </script>    
     </head>
     <body>
-        <div>TODO write content</div>
-        <p><a href="practica1a.html">Practica1A</a></p>
-        <p><a href="practica2a.html">Practica2A</a></p>
-        <p><a href="practica3a.html">Practica3A</a></p>
+        <h1>Prototip joc del penjat</h1>
+            <input type="text" id="lletra" 
+                   placeholder="Escriu una lletra minuscula"> <br> 
+            <button type="button" id="boton" onclick="myFunction();">
+                Comprovar</button>        
+        <h2>Paraula</h2>
+        <h4 id="palabra">_ _ _ _ _ _ _</h4>
+        <h2>Vides</h2>
+        <h4 id="vides">7</h4>
+        <h2>Lletres</h2>
+        <h4 id="fallos">_ _ _ _ _ _ _</h4>
+         <h4>Crèdits: El joc del penjat on scratch</h4>
     </body>
 </html>
