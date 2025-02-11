@@ -41,6 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     window.alert("has encertat");
                     palabra=palabra+lletra;
                      document.getElementById("palabra").innerHTML = palabra;
+                      document.getElementById("miau").play(); 
                 }
                 else {
                    window.alert("has fallat"); 
@@ -49,13 +50,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                    fallos=fallos+lletra;
                    document.getElementById("fallos").innerHTML = fallos;
                    EnseñarImgn();
+                   document.getElementById("boom_cloud").play();
                }
                if (Vides==0) {
                    window.alert("has perdido");
+                   document.getElementById("cat-fight").play();
                    FinalJuego();
                } 
                if (palabra.length >=7) {
                window.alert("has ganado");
+               document.getElementById("cheer").play();
                    FinalJuego();    
                }
             } 
@@ -126,6 +130,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <h2>Lletres</h2>
         <h4 id="fallos">_ _ _ _ _ _ _</h4>
          <h4>Crèdits: El joc del penjat on scratch</h4>
+         
+         <div id="idiomas">
+             <a href="https://elaborate-bienenstitch-a32ae7.netlify.app/imagenesonido"><img src="img/ca.png" alt=""/></a>
+             <a href="https://elaborate--bienenstitch--a32ae7-netlify-app.translate.goog/imagenesonido?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img src="img/es.png" alt=""/></a>
+             <a href="https://elaborate--bienenstitch--a32ae7-netlify-app.translate.goog/imagenesonido?_x_tr_sl=ca&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp"><img src="img/gb.png" alt=""/>
+         </div>
          <div id="imagenes">
             <img src="img/ahorcado_0.png" id="ahorcado_0" width="280" height="270" title="Et queden 6 vides!" />
             <img src="img/ahorcado_1.png" id="ahorcado_1" width="280" height="270" title="Et queden 5 vides!" />
@@ -137,16 +147,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
          </div>
          <div id="audios">
              <audio id="cat-fight"><source src="aud/cat-fight.mp3" type="audio/mpeg"></audio>
-             <audio id="bell_toll.mp3"><source src="aud/bell_toll.mp3" type="audio/mpeg"></audio>
-             <audio id="bell_toll_x3.mp3"><source src="aud/bell_toll_x3.mp3" type="audio/mpeg"></audio>
-             <audio id="boom_cloud.mp3"><source src="aud/boom_cloud.mp3" type="audio/mpeg"></audio>
-             <audio id="cheer.mp3"><source src="aud/cheer.mp3" type="audio/mpeg"></audio>
-             <audio id="clock_ticking.mp3"><source src="aud/clock_ticking.mp3" type="audio/mpeg"></audio>
-             <audio id="miau.mp3"><source src="aud/miau.mp3" type="audio/mpeg"></audio>
-             <audio id="mystery.mp3"><source src="aud/mystery.mp3" type="audio/mpeg"></audio>
-             
-             
-             
+             <audio id="bell_toll"><source src="aud/bell_toll.mp3" type="audio/mpeg"></audio>
+             <audio id="bell_toll_x3"><source src="aud/bell_toll_x3.mp3" type="audio/mpeg"></audio>
+             <audio id="boom_cloud"><source src="aud/boom_cloud.mp3" type="audio/mpeg"></audio>
+             <audio id="cheer"><source src="aud/cheer.mp3" type="audio/mpeg"></audio>
+             <audio id="clock_ticking"><source src="aud/clock_ticking.mp3" type="audio/mpeg"></audio>
+             <audio id="miau"><source src="aud/miau.mp3" type="audio/mpeg"></audio>
+             <audio id="mystery"><source src="aud/mystery.mp3" type="audio/mpeg"></audio>                       
          </div>
     </body>
 </html>
