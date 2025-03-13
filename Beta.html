@@ -129,7 +129,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                    document.getElementById("cat-fight").play();
                    FinalJuego();
                } 
-               if (palabra.length >=7) {
+               // if (palabra.length >=7) {
+               if (!Paraula.includes("_")) {
                window.alert("has ganado");
                document.getElementById("cheer").play();
                    FinalJuego();    
@@ -213,6 +214,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
              <a href="https://elaborate-bienenstitch-a32ae7.netlify.app/imagenesonido"><img src="img/ca.png" alt=""/></a>
              <a href="https://elaborate--bienenstitch--a32ae7-netlify-app.translate.goog/imagenesonido?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img src="img/es.png" alt=""/></a>
              <a href="https://elaborate--bienenstitch--a32ae7-netlify-app.translate.goog/imagenesonido?_x_tr_sl=ca&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp"><img src="img/gb.png" alt=""/></a>
+             <button id="teclat" onclick="document.getElementById('Teclat').hidden= 
+                         !document.getElementById('Teclat').hidden;" title="Mostra o Amaga"></button>
+              <img src="img/keyboard.png" alt="Teclat">
+                 
          </div>
          <div id="imagenes">
             <img src="img/ahorcado_0.png" id="ahorcado_0" width="280" height="270" title="Et queden 6 vides!" />
